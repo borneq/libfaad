@@ -36,7 +36,7 @@
  * As described in:
  *  P. Duhamel, Y. Mahieux, and J.P. Petit, "A Fast Algorithm for the
  *  Implementation of Filter Banks Based on 'Time Domain Aliasing
- *  Cancellation’," IEEE Proc. on ICASSP‘91, 1991, pp. 2209-2212.
+ *  Cancellationâ€™," IEEE Proc. on ICASSPâ€˜91, 1991, pp. 2209-2212.
  *
  *
  * As of April 6th 2002 completely rewritten.
@@ -72,7 +72,7 @@ mdct_info *faad_mdct_init(uint16_t N)
 
     /* RE(mdct->sincos[k]) = scale*(real_t)(cos(2.0*M_PI*(k+1./8.) / (real_t)N));
      * IM(mdct->sincos[k]) = scale*(real_t)(sin(2.0*M_PI*(k+1./8.) / (real_t)N)); */
-    /* scale is 1 for fixed point, sqrt(N) for floating point */
+    /* scale is 1 for fixed point, sqrt(N/2) for floating point */
     switch (N)
     {
     case 2048: mdct->sincos = (complex_t*)mdct_tab_2048; break;
